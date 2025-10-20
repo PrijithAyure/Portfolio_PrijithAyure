@@ -2,15 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/h6qzdv2nbp65/public_html/
-    
-    # Create directories if they don't exist
-    - /bin/mkdir -p $DEPLOYPATH/css
-    - /bin/mkdir -p $DEPLOYPATH/js
-    
-    # Copy main files
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp .htaccess $DEPLOYPATH
-    
-    # Copy contents of css and js folders
-    - /bin/cp css/style.css $DEPLOYPATH/css/
-    - /bin/cp js/main.js $DEPLOYPATH/js/
+    - /bin/rsync -a --delete --exclude=".git" --exclude=".cpanel.yml" --exclude="README.md" ./ $DEPLOYPATH
