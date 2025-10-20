@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prijith Ayure - Data Engineer</title>
+    <title>Prijith Ayure - AI & Data Engineer</title>
     
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <div class="container">
-        <div class="terminal-header">
-            <div class="header-btn"></div>
-            <div class="header-btn yellow"></div>
-            <div class="header-btn green"></div>
-            <div class="header-title">PrijithAyure-Portfolio</div>
-        </div>
-        <div id="terminal" onclick="document.getElementById('input').focus()">
-            <div id="output"></div>
-            <div id="input-line" class="line">
-                <span class="prompt">PrijithAyure:~$</span>
-                <input type="text" id="input" autofocus>
-                <span class="cursor"></span>
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="video/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="chat-container">
+        <div id="chat-output">
             </div>
+        <div class="input-area">
+            <input type="text" id="chat-input" placeholder="Ask me about Prijith...">
+            <button id="send-btn">Send</button>
         </div>
     </div>
 
